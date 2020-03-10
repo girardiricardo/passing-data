@@ -106,6 +106,15 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <h2>Favorite Movies</h2>
+		<ol>
+		{profiles.map((profile) => {
+        	return (
+				<li key={profile.id}>
+                  {users[profile.userID].name}'s favorite movie is {movies[profile.favoriteMovieID].name}.
+          		</li>
+          	)
+        })}
+		</ol>
       </div>
     );
   }
